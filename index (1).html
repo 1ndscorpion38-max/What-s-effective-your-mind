@@ -1,0 +1,344 @@
+<!DOCTYPE html>  <html lang="en">    <head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>What's Effect Your Mind — ind.scorpion</title>    
+<link rel="preconnect" href="https://fonts.googleapis.com">    
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">    
+<style>    
+  :root{    
+    --orange: #E8580C;    
+    --orange-deep: #B8420A;    
+    --orange-soft: #FFE8D9;    
+    --black: #14110F;    
+    --white: #FFFFFF;    
+    --off-white: #FDFAF7;    
+    --line: rgba(20,17,15,0.12);    
+  }    
+  *{margin:0;padding:0;box-sizing:border-box;}    
+  html{scroll-behavior:smooth;}    
+  body{    
+    background:var(--white);    
+    color:var(--black);    
+    font-family:'Space Grotesk', sans-serif;    
+    line-height:1.5;    
+    overflow-x:hidden;    
+  }    
+  h1,h2,h3, .display{    
+    font-family:'Fraunces', serif;    
+    font-weight:900;    
+    letter-spacing:-0.01em;    
+  }    
+  a{color:inherit;text-decoration:none;}    
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px;}  /* NAV */  
+nav{  
+display:flex;justify-content:space-between;align-items:center;  
+padding:28px 0;  
+}  
+.brand{  
+font-family:'Fraunces', serif;  
+font-weight:600;  
+font-size:20px;  
+letter-spacing:-0.02em;  
+}  
+.brand span{color:var(--orange);}  
+.nav-links{display:flex;gap:36px;font-size:14px;font-weight:500;}  
+.nav-links a{opacity:0.75;transition:opacity .2s;}  
+.nav-links a:hover{opacity:1;}  
+.nav-cta{  
+background:var(--black);color:var(--white);  
+padding:10px 20px;border-radius:100px;font-size:14px;font-weight:500;  
+}  
+.nav-cta:hover{background:var(--orange-deep);}  /* HERO */
+.hero{
+position:relative;
+padding:70px 0 100px;
+overflow:hidden;
+}
+.eyebrow{
+display:inline-flex;align-items:center;gap:8px;
+font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+color:var(--orange-deep);
+margin-bottom:22px;
+}
+.eyebrow::before{
+content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);
+}
+.hero h1{
+font-size:clamp(44px, 7vw, 84px);
+line-height:0.98;
+max-width:820px;
+}
+.hero h1 em{
+font-style:italic;
+color:var(--orange);
+}
+.hero-sub{
+max-width:520px;
+font-size:18px;
+margin-top:26px;
+opacity:0.78;
+}
+.hero-actions{
+display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;
+}
+.btn{
+display:inline-flex;align-items:center;gap:10px;
+padding:16px 30px;border-radius:100px;
+font-size:15px;font-weight:700;
+transition:transform .2s ease, box-shadow .2s ease;
+border:2px solid transparent;
+}
+.btn-primary{
+background:var(--orange);color:var(--white);
+box-shadow:0 8px 24px rgba(232,88,12,0.28);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(232,88,12,0.38);}
+.btn-outline{
+border-color:var(--black);color:var(--black);
+}
+.btn-outline:hover{background:var(--black);color:var(--white);}
+
+/* Brainwave signature */
+.wave-holder{
+margin-top:70px;
+position:relative;height:120px;
+}
+svg#wave{width:100%;height:100%;overflow:visible;}
+.wave-path{
+fill:none;
+stroke:var(--orange);
+stroke-width:2.5;
+stroke-linecap:round;
+stroke-dasharray:6 3000;
+animation:draw 3.6s ease-in-out infinite;
+}
+@keyframes draw{
+0%{stroke-dashoffset:3000;}
+45%{stroke-dashoffset:0;}
+100%{stroke-dashoffset:-3000;}
+}
+.wave-labels{
+display:flex;justify-content:space-between;
+font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;
+opacity:0.45;margin-top:10px;
+}
+
+/* triggers grid */
+section{padding:90px 0;}
+.section-head{
+display:flex;justify-content:space-between;align-items:flex-end;
+gap:24px;margin-bottom:52px;flex-wrap:wrap;
+border-bottom:1px solid var(--line);
+padding-bottom:28px;
+}
+.section-head h2{font-size:clamp(30px,4vw,44px);}
+.section-tag{font-size:14px;opacity:0.55;max-width:340px;}
+
+.triggers{
+display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+background:var(--line);
+border:1px solid var(--line);
+}
+.trigger-card{
+background:var(--white);
+padding:34px 30px;
+transition:background .25s ease;
+}
+.trigger-card:hover{background:var(--off-white);}
+.trigger-num{
+font-family:'Fraunces',serif;font-size:14px;color:var(--orange-deep);
+font-weight:600;margin-bottom:14px;display:block;
+}
+.trigger-card h3{font-size:20px;margin-bottom:10px;font-weight:600;}
+.trigger-card p{font-size:14.5px;opacity:0.68;}
+
+/* About / split */
+.split{
+background:var(--off-white);
+}
+.split-grid{
+display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;
+}
+.book-cover{
+aspect-ratio:3/4.2;
+background:linear-gradient(155deg, var(--black) 0%, #2b241f 55%, var(--orange-deep) 150%);
+border-radius:6px;
+position:relative;
+display:flex;flex-direction:column;justify-content:space-between;
+padding:36px;
+box-shadow:0 30px 60px rgba(20,17,15,0.25);
+color:var(--white);
+}
+.book-cover .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:0.6;}
+.book-cover h3{font-family:'Fraunces',serif;font-size:30px;line-height:1.05;color:var(--white);}
+.book-cover .author{font-size:13px;opacity:0.7;}
+.split-text h2{font-size:clamp(28px,4vw,40px);margin-bottom:20px;}
+.split-text p{font-size:16px;opacity:0.75;margin-bottom:16px;max-width:480px;}
+.stat-row{display:flex;gap:40px;margin-top:32px;}
+.stat b{display:block;font-family:'Fraunces',serif;font-size:28px;color:var(--orange-deep);}
+.stat span{font-size:12.5px;opacity:0.6;text-transform:uppercase;letter-spacing:.04em;}
+
+/* Email + buy */
+.cta-band{
+background:var(--black);
+color:var(--white);
+border-radius:20px;
+padding:64px 56px;
+display:grid;grid-template-columns:1fr 1fr;gap:48px;
+align-items:center;
+}
+.cta-band h2{color:var(--white);font-size:clamp(26px,3.4vw,36px);margin-bottom:14px;}
+.cta-band p{opacity:0.65;font-size:15px;max-width:400px;}
+.cta-col{display:flex;flex-direction:column;gap:14px;}
+.cta-col-label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:0.5;font-weight:500;}
+form{display:flex;gap:10px;}
+input[type=email]{
+flex:1;padding:15px 18px;border-radius:100px;border:1px solid rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.06);color:var(--white);font-family:inherit;font-size:14.5px;
+}
+input[type=email]::placeholder{color:rgba(255,255,255,0.4);}
+input[type=email]:focus{outline:2px solid var(--orange);outline-offset:2px;}
+.buy-links{display:flex;gap:10px;flex-wrap:wrap;}
+.buy-links a{
+padding:14px 22px;border-radius:100px;border:1px solid rgba(255,255,255,0.25);
+font-size:14px;font-weight:600;transition:.2s;
+}
+.buy-links a:hover{background:var(--orange);border-color:var(--orange);}
+.form-note{font-size:12.5px;opacity:0.5;}
+
+footer{
+padding:48px 0 60px;
+display:flex;justify-content:space-between;align-items:center;
+font-size:13px;opacity:0.55;flex-wrap:wrap;gap:16px;
+border-top:1px solid var(--line);
+}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible{outline:2px solid var(--orange);outline-offset:3px;}
+
+@media (max-width:760px){
+.triggers{grid-template-columns:1fr;}
+.split-grid{grid-template-columns:1fr;}
+.cta-band{grid-template-columns:1fr;padding:40px 26px;border-radius:14px;}
+form{flex-direction:column;}
+.nav-links{display:none;}
+.stat-row{gap:26px;}
+}
+@media (prefers-reduced-motion: reduce){
+.wave-path{animation:none;stroke-dasharray:none;}
+}
+</style>
+
+</head>    
+<body>  <div class="wrap">    
+  <nav>    
+    <div class="brand">ind.<span>scorpion</span></div>    
+    <div class="nav-links">    
+      <a href="#book">The Book</a>    
+      <a href="#inside">What's Inside</a>    
+      <a href="#author">Author</a>    
+    </div>    
+    <a href="#get" class="nav-cta">Get the book</a>    
+  </nav>    
+</div>  <div class="wrap hero">    
+  <div class="eyebrow">Out now · Psychology / Self-Understanding</div>    
+  <h1>What's <em>Effect</em><br>Your Mind</h1>    
+  <p class="hero-sub">This book is about the mind. It helps you become a better version of yourself. IMPROVE : THINKING, SELF CONTROL, MEMORY.. A lot of chapters will help you understand and improve it.</p>    
+  <div class="hero-actions">    
+    <a href="#get" class="btn btn-primary">Buy the book →</a>    
+  </div>    <div class="wave-holder">    
+    <svg id="wave" viewBox="0 0 1000 120" preserveAspectRatio="none">    
+      <path class="wave-path" d="M0,60 L120,60 L150,20 L180,100 L210,60 L340,60 L365,40 L390,80 L410,60 L560,60 L590,10 L615,110 L640,60 L800,60 L825,35 L850,85 L875,60 L1000,60"/>    
+    </svg>    
+    <div class="wave-labels"><span> Self-Control </span><span>Emotion</span><span> Meditation </span><span> Impulse </span></div>    
+  </div>    
+</div>  <section id="inside" class="wrap">    
+  <div class="section-head">    
+    <h2>IND SCORPION</h2>    
+    <p class="section-tag">The book is built around the influences readers report having the least control over — and the most power to change.</p>    
+  </div>    
+  <div class="triggers">    
+    <div class="trigger-card">    
+      <span class="trigger-num">01</span>    
+      <h3>self control</h3>    
+      <p>"Every time you say 'I'll start tomorrow,' something inside your brain gets stronger."</p>    
+    </div>    
+    <div class="trigger-card">    
+      <span class="trigger-num">02</span>    
+      <h3>THINKING</h3>    
+      <p>
+"Your next thought has already started before you notice it."</p>    
+    </div>    
+    <div class="trigger-card">    
+      <span class="trigger-num">03</span>    
+      <h3>Habit</h3>    
+      <p>The invisible architecture of repeated days, and how small loops become identity.</p>    
+    </div>    
+    <div class="trigger-card">    
+      <span class="trigger-num">04</span>    
+      <h3>EMOTION</h3>    
+      <p>"emotion is a not a identity is a chemical"</p>    
+    </div>    
+    <div class="trigger-card">    
+      <span class="trigger-num">05</span>    
+      <h3>Impulse</h3>    
+      <p>"An impulse lasts seconds. Its consequences can last a lifetime."</p>    
+    </div>    
+    <div class="trigger-card">    
+      <span class="trigger-num">06</span>    
+      <h3>how evolve brain</h3>    
+      <p>journey of single sale to  brain " brain evolution"</p>    
+    </div>    
+  </div>    
+</section>  <section id="book" class="split">    
+  <div class="wrap split-grid">    
+    <div class="book-cover">    
+      <div class="tag"> 🧠:Can you buy this book </div>    
+      <h3>What's Effect Your Mind</h3>    
+      <div class="author"></div>by Scorpion</div>    
+    </div>    
+    <div class="split-text">    
+      <h2>Not another self-help checklist.</h2>    
+      <p>मत बाँध अपने इस दिमाग़ को किसी बंद पिंजरे में,ये वो बारूद है जो फट जाए तो पूरा नक़्शा बदलता है!</p>    
+      <p>इंटरनेट पर हर कोई हज़ारों के कोर्सेज बेचने में लगा है, जो सच में इरिटेट करता है। इसलिए मैंने एक ऐसी PDF बनाई है जिसमें सीधे काम की बात है, कोई बकवास नहीं।
+कीमत सिर्फ ₹8 रखी है—एक चाय से भी कम। इतनी कम इसलिए ताकि किसी को लेने से पहले सोचना न पड़े और हर कोई इसे आसानी से पढ़ सके। अगर आपको लगता है कि यह आपके काम आ सकती है, तो एक बार देख लो:</p>    
+      <div class="stat-row">    
+        <div class="stat"><b>?</b><span>Core forces</span></div>    
+        <div class="stat"><b>?</b><span>Pages</span></div>    
+        <div class="stat"><b>?</b><span>Honest read</span></div>    
+      </div>    
+    </div>    
+  </div>    
+</section>  <section id="get" class="wrap">    
+  <div class="cta-band">    
+    <div>    
+      <h2>Get pdf and improve yourself.</h2>    
+      <p>this pdf can be sale on only 8 rupees can you buy this pdf.,</p>    
+    </div>    
+    <div class="cta-col">    
+      <div class="cta-col-label">Buy now</div>    
+      <div class="cta-col-label" style="margin-top:>14px;"</div>    
+      <form id="notify-form">    
+        <input type="email" id="notify-email" placeholder="you@email.com" required aria-label="Email address">    
+        <button type="submit" class="btn btn-primary" style="padding:15px 24px;"></button></button>    
+      </form>    
+      <p class="form-note" id="form-note">https://youtube.com/@pagal-bichchu?si=S7XOnKyMEs4IellN</p></p>    
+    </div>    
+  </div>    
+</section>  <div class="wrap">    
+  <footer>    
+    <div>© 2026 ind.scorpion — What's Effect Your Mind</div>    
+    <div>Made for readers who want their mind back.</div>    
+  </footer>    
+</div>  <script>    
+  const form = document.getElementById('notify-form');    
+  const note = document.getElementById('form-note');    
+  form.addEventListener('submit', function(e){    
+    e.preventDefault();    
+    const email = document.getElementById('notify-email').value;    
+    note.textContent = "Thanks — saved locally as a demo (" + email + "). Connect this form to a real email service to actually collect signups.";    
+    form.reset();    
+  });    
+</script>  </body>    
+</html>   __________________________
+
